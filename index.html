@@ -7,9 +7,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
-  width: 30%;
+  width: 100%;
   padding: 12px 20px;
-  margin:  0;
+  margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -17,7 +17,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-  background-color: #000000;
+  background-color: #04AA6D;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -26,8 +26,16 @@ button {
   width: 100%;
 }
 
+button:hover {
+  opacity: 0.8;
+}
 
-
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
 
 /* Center the image and position the close button */
 .imgcontainer {
@@ -89,6 +97,12 @@ span.psw {
   cursor: pointer;
 }
 
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
 @-webkit-keyframes animatezoom {
   from {-webkit-transform: scale(0)} 
   to {-webkit-transform: scale(1)}
@@ -113,7 +127,7 @@ span.psw {
 </head>
 <body>
 
-
+<h2>AMSI</h2>
 
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
@@ -121,16 +135,16 @@ span.psw {
   
   <form class="modal-content animate" action="/action_page.php" method="post">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="img_avatar2.png" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
-     <div class="first"></div>
-      <input type="text" placeholder="username" name="uname" required>
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
 
-     <div class="second"></div> 
-      <input type="password" placeholder="Password" name="psw" required>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
         
       <button type="submit">Login</button>
       <label>
